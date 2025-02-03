@@ -1,0 +1,216 @@
+---
+execute: 
+  message: false
+  warning: false
+  echo: false
+---
+
+---
+title: "Meu primeiro documento"
+author: "Carlos"
+format: html
+editor: visual
+lang: pt
+---
+# Exemplo: somando 1 + 1
+1 + 1
+```{r}
+# Exemplo: somando 1 + 1
+1 + 1
+```
+
+```{r}
+# install.packages("tidyverse")
+library(tidyverse)
+# install.packages("palmerpenguins")
+library("palmerpenguins")
+penguins |>
+  ggplot() +
+  aes(x = flipper_length_mm, y = body_mass_g) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+  theme_minimal()
+```
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+here::here()
+
+download.file(
+  url = "https://github.com/ipeadata-lab/curso_r_intro_202409/raw/refs/heads/main/dados/sidrar_4092_bruto_2.csv",
+              destfile = "dados/sidrar_4092_bruto_2.csv",
+              mode = "wb")
+
+<!-- install.packages("dplyr") -->
+library()
+
+glimpse(dados_pasta)
+
+library(readr)
+arquivo_para_ler <- "../dados/sidrar_4092_bruto_2.csv"
+ 
+dados_pasta <- read_csv2(arquivo_para_ler)
+
+library(dplyr) 
+glimpse(dados)
+
+library(tidyverse)
+ 
+ 
+# Uma forma de encontrar o caminho
+arquivo_para_ler <- "../dados/sidrar_4092_bruto_2.csv"
+ 
+dados_pasta <- read_csv2(arquivo_para_ler)
+ 
+glimpse(dados_pasta)
+
+```{r}
+
+arquivo_para_ler <- "../dados/mtcars.csv"
+
+ 
+dados_pasta <- read_csv2(arquivo_para_ler)
+ 
+glimpse (dados_pasta)
+
+
+arquivo_para_ler <- "../dados/mtcars.csv"
+
+dados_pasta <- read_csv2(arquivo_para_ler)
+ 
+glimpse (dados_pasta)
+
+# Carregar os pacotes
+library(tidyverse)
+library(palmerpenguins)
+
+# exemplo de código
+penguins |>
+  ggplot() +
+  aes(x = flipper_length_mm, y = body_mass_g) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+  labs(
+    x = "Comprimento da nadadeira (mm)",
+    y = "Massa corporal (g)",
+    color = "Espécie",
+    shape = "Espécie",
+    title = "Relação entre comprimento da nadadeira e massa corporal",
+    subtitle = "Pinguins das espécies Adelie, Chinstrap e Gentoo",
+    caption = "Fonte: Pacote palmerpenguins."
+  ) +
+  theme_minimal()
+  
+```{r}
+library(tidyverse)
+arquivo_para_ler <- "../dados/mtcars.csv"
+dados_pasta <- read_csv2(arquivo_para_ler)
+glimpse(dados_pasta)
+```
+
+write.csv2(mtcars, "dados/mtcars.csv")
+
+pinguins_frequencia <- penguins |> 
+  count(species, island, sort = TRUE)
+
+pinguins_frequencia
+
+pinguins_frequencia |> 
+  knitr::kable()
+
+#| label: fig-grafico-dos-pinguins
+#| fig-cap: "Gráfico da relação ...."
+#| fig-align: "center"
+#| out-width: "80%"
+# Carregar os pacotes
+library(tidyverse)
+library(palmerpenguins)
+ 
+# exemplo de código
+penguins |>
+  ggplot() +
+  aes(x = flipper_length_mm, y = body_mass_g) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+  labs(
+    x = "Comprimento da nadadeira (mm)",
+    y = "Massa corporal (g)",
+    color = "Espécie",
+    shape = "Espécie",
+    title = "Relação entre comprimento da nadadeira e massa corporal",
+    subtitle = "Pinguins das espécies Adelie, Chinstrap e Gentoo",
+    caption = "Fonte: Pacote palmerpenguins."
+  ) +
+  theme_minimal()
+  
+install.packages("kableExtra")
+library("kableExtra")
+# For dev version
+# install.packages("devtools")
+devtools::install_github("haozhu233/kableExtra")
+
+library(kableExtra)
+dt <- mtcars[1:5, 1:6]
+
+nrow(penguins)
+?reactable::reactable
+
+install.packages("here")
+library(here)
+here::here("dados/sidrar_4092_bruto.xlsx")
+y
+
+# Exemplo: somando 1 + 1
+1 + 1
+```
+# Exemplo: somando 1 + 1
+1 + 1
+
+# Carregar os pacotes
+library(tidyverse)
+library(palmerpenguins)
+
+# exemplo de código
+penguins |>
+  ggplot() +
+  aes(x = flipper_length_mm, y = body_mass_g) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange", "darkorchid", "cyan4")) +
+  labs(
+    x = "Comprimento da nadadeira (mm)",
+    y = "Massa corporal (g)",
+    color = "Espécie",
+    shape = "Espécie",
+    title = "Relação entre comprimento da nadadeira e massa corporal",
+    subtitle = "Pinguins das espécies Adelie, Chinstrap e Gentoo",
+    caption = "Fonte: Pacote palmerpenguins."
+  ) +
+  theme_minimal()
+  
+  pinguins_frequencia <- penguins |> 
+  count(species, island, sort = TRUE)
+
+pinguins_frequencia
+
+pinguins_frequencia |> 
+  knitr::kable()
+  
+  
