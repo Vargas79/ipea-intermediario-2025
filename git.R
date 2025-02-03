@@ -36,3 +36,8 @@ Personal access token for "https://github.com": <discovered>
 
 use_git()  
 usethis::git_sitrep()
+
+usethis::use_git()
+
+usethis::use_github()
+
